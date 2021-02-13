@@ -1,9 +1,4 @@
-server:
-  port: 9527
-
 spring:
-  application:
-    name: cloud-gateway
   cloud:
     gateway:
       discovery:
@@ -26,8 +21,6 @@ spring:
           predicates:
             - Path=/payment/lb/**         # 断言，路径相匹配的进行路由
 eureka:
-  instance:
-    hostname: cloud-gateway-service
   client:
     fetch-registry: true
     register-with-eureka: true
